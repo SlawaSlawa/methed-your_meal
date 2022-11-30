@@ -4,4 +4,4 @@
 
 ## Ссылка на GitHub Pages
 
-[Test-Inteco](https://slawaslawa.github.io/test-inteco/)
+[Methed-your-meal](https://slawaslawa.github.io/methed-your_meal/)
