@@ -4,16 +4,17 @@ import {
     catalogList,
 } from './elements.js';
 
-import { createCardProduct } from './createCardProduct.js';
 import { openModal } from './openModal.js';
 import { renderListProduct } from './renderListProduct.js';
 import { navigationListController } from './navigationListController.js';
+import { cartInit } from './cart.js';
 
 catalogList.addEventListener('click', (evt) => {
     const target = evt.target
 
     if (target.closest('.product__detail') || target.closest('.product__image')) {
-        openModal(product)
+        const id = target.closest('.product').dataset.idProduct
+        openModal(id)
     }
 })
 
@@ -27,7 +28,8 @@ modalProduct.addEventListener('click', (evt) => {
 
 const init = () => {
     renderListProduct()
-    navigationListController()
+    navigationListController(renderListProduct)
+    cartInit()
 }
 
 init()
